@@ -22,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -37,7 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'build/web/'
+          path: 'build/web'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
