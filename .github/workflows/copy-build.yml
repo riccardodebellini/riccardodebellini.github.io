@@ -1,0 +1,24 @@
+name: Copy Build to gh-pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  copy-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm install
+      - name: Copy build to gh-pages branch
+        run: |
+          git checkout gh-pages
+          cp -r build/web .
+          git add .
+          git commit -m "Updated gh-pages with latest build"
+          git push origin gh-pages
