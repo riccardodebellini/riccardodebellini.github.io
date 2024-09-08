@@ -61856,7 +61856,7 @@ O7(a){$.aeS().l(0,this,a)}}
 A.Go.prototype={
 M(a){return new A.ru(A.at2($.aoF(),A.du(a,null,t.l).w.e),B.Wd,"Riccardo Debellini - portfolio",!1,null)}}
 A.qv.prototype={
-ae(){return new A.LX([B.XP,B.XL,B.XM])}}
+ae(){return new A.LX([B.XQ,B.XL,B.XM])}}
 A.LX.prototype={
 M(a){return A.agD(A.a([B.a2K,A.aky(new A.a8L(this),3,B.dI,!0),A.qg(A.ee(u.T,a.D(t.E).w.a.w))],t.D),B.WQ)}}
 A.a8L.prototype={
@@ -61887,7 +61887,7 @@ A.a9Q.prototype={
 $0(){this.a.a.J_(2)},
 $S:0}
 A.ui.prototype={
-ae(){return new A.OP([B.XQ,B.XS,B.XR,B.XO,B.XN])}}
+ae(){return new A.OP([B.XO,B.XS,B.XR,B.XP,B.XN])}}
 A.OP.prototype={
 M(a){return A.agD(A.a([B.a2R,A.aky(new A.abl(this),5,B.dI,!0),A.qg(A.ee(u.T,a.D(t.E).w.a.w))],t.D),B.WO)}}
 A.abl.prototype={
@@ -67180,9 +67180,9 @@ B.XK=new A.uh(null,null,null,null,null)
 B.XL=new A.hp("Instagram","Scopri la mia pagina instagram, dove non posto nulla","https://instagram.com/riccardodebellini")
 B.XM=new A.hp("GitHub","Scopri il mio profilo GitHub, dove puoi trovare tutto il codice che produco","https://github.com/riccardodebellini/")
 B.XN=new A.hp("\ud83d\udd79\ufe0f RD Games","Una selezione dei giochi Scratch che ho realizzato da piccolo","https://sites.google.com/view/rdgame")
-B.XO=new A.hp("\u26a0\ufe0f [DEPRECATO!] - Material Components (CSS + HTML)","I componenti del Material You, per il tuo sito Html/CSS","https://github.com/Riccardo-Debellini/material-components")
-B.XP=new A.hp("e-mail","inviami un'email a 'riccardo.debellini@gmail.com","mailto:riccardo.debellini@gmail.com")
-B.XQ=new A.hp("\ud83d\udcda MyBookshelf - Una app per gestire tutti i tuoi libri","Una app sviluppata con Flutter e Supabase dove salvare tutti i tuoi libri, le loro posizioni e molto altro!","https://github.com/riccardodebellini/MyBookshelf")
+B.XO=new A.hp("MyBookshelf - Una app per gestire tutti i tuoi libri","Una app sviluppata con Flutter e Supabase dove salvare tutti i tuoi libri, le loro posizioni e molto altro!","https://github.com/riccardodebellini/MyBookshelf")
+B.XP=new A.hp("\u26a0\ufe0f [DEPRECATO!] - Material Components (CSS + HTML)","I componenti del Material You, per il tuo sito Html/CSS","https://github.com/Riccardo-Debellini/material-components")
+B.XQ=new A.hp("e-mail","inviami un'email a 'riccardo.debellini@gmail.com","mailto:riccardo.debellini@gmail.com")
 B.XR=new A.hp("\ud83d\udcbb PDS","Un sito sviluppato per un gioco, per simulare un terminale da sbloccare, con password e username, messaggio di errore e account aministratore","https://riccardodebellini.github.io/pds/")
 B.XS=new A.hp("\ud83d\udcf2 MyAppstore","Un Programma sviluppato per gestire tutte le app e i servizi che ho realizzato e realizzer\xf2","https://github.com/riccardodebellini/AppStore")
 B.XT=new A.ui(null)
