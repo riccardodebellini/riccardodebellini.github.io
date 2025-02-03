@@ -16,12 +16,8 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Alert.destructive(
-                  title: Text('Sito non completo'),
-                  content: Text('Molte pagine non sono terminate e/o pronte per il mobile.\nAspettati errori e/o pagine vuote (404).'),
-                  leading: Icon(Icons.info_outline),
-                ),
-                Gap(20),
+
+
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
@@ -29,7 +25,7 @@ class HomePage extends StatelessWidget {
                         fontSize:
                             Theme.of(context).typography.x6Large.fontSize),
                     children: [
-                      TextSpan(
+                      const TextSpan(
                         text: 'Ciao.\nMi chiamo ',
                       ),
                       TextSpan(
@@ -40,24 +36,23 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Gap(10),
-                Text(
+                const Gap(10),
+                const Text(
                   'Ho 16 anni e sviluppo app per passione',
                   textAlign: TextAlign.center,
                 ).lead(),
-                Gap(10),
+                const Gap(10),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     OutlineButton(
-                      child: Text("Contattami"),
+                      child: const Text("Contattami"),
                       onPressed: () {
                         context.go('/contact');
                       },
                     ),
-                    Gap(10),
+                    const Gap(10),
                     PrimaryButton(
-                      child: Text("I miei Progetti"),
                       trailing: Icon(
                         RadixIcons.arrowRight,
                         size: DefaultTextStyle.of(context).style.fontSize,
@@ -65,23 +60,31 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         context.go('/projects');
                       },
-                    )
+                      child: const Text("I miei Progetti"),
+                    ),
+
                   ],
-                )
+                ),
+                const Gap(20),
+                const Alert(
+                  title: Text('Sito non completo'),
+                  content: Text('Molte pagine non sono terminate e/o pronte per il mobile.\nAspettati errori e/o pagine vuote (404).'),
+                  leading: Icon(Icons.info_outline),
+                ),
               ]).sized(height: MediaQuery.of(context).size.height),
-          Row(
+          const Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                child: Card(child: Text('</>')),
                 flex: 2,
+                child: Card(child: Text('</>')),
               ),
               Gap(10),
               Expanded(child: Card(child: Text("</>")))
             ],
           ).sized(height: 400).withPadding(
               horizontal: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get()),
-          FooterWidget()
+          const FooterWidget()
         ],
       ),
     );

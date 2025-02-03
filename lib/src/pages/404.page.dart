@@ -14,7 +14,7 @@ class Page404 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Text('404',
               textAlign: TextAlign.center,
 
@@ -22,26 +22,26 @@ class Page404 extends StatelessWidget {
                     fontSize: Theme.of(context).typography.x6Large.fontSize),
 
                     ),
-            Gap(10),
-            Text('Pagina non trovata\nLa pagina cercata potrebbe non esistere o non essere ancora stata creata', textAlign: TextAlign.center,).lead(),
-            Gap(10),
+            const Gap(10),
+            const Text('Pagina non trovata\nLa pagina cercata potrebbe non esistere o non essere ancora stata creata', textAlign: TextAlign.center,).lead(),
+            const Gap(10),
             PrimaryButton(
-              child: Text("Torna a home"),
+              child: const Text("Torna a home"),
               onPressed: () {
                 context.go('/');
               },
             ),
 
-            Gap(10),
+            const Gap(10),
             LinkButton(
-              child: Text("Segnala un problema"),
+              child: const Text("Segnala un problema"),
               onPressed: () {
-                final url = 'https://github.com/riccardodebellini/riccardodebellini.github.io/issues/new';
+                const url = 'https://github.com/riccardodebellini/riccardodebellini.github.io/issues/new';
                 launchUrl(Uri.parse(url));
               },
             ),
-            Spacer(),
-            FooterWidget()
+            const Spacer(),
+            const FooterWidget()
           ]),
     );
   }

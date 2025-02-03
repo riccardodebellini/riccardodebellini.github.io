@@ -21,7 +21,7 @@ class ContactPage extends StatelessWidget {
                   style: DefaultTextStyle.of(context).style.copyWith(
                       fontSize: Theme.of(context).typography.x6Large.fontSize),
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Restiamo in ',
                     ),
                     TextSpan(
@@ -32,8 +32,8 @@ class ContactPage extends StatelessWidget {
                   ],
                 ),
               ),
-              Gap(10),
-              Text(
+              const Gap(10),
+              const Text(
                 'Scopri tutti i miei canali social!',
                 textAlign: TextAlign.center,
               ).lead(),
@@ -42,6 +42,7 @@ class ContactPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
+              flex: 2,
               child: Clickable(
                 onPressed: () {
 
@@ -69,9 +70,8 @@ class ContactPage extends StatelessWidget {
                   ),
                 ),
               ),
-              flex: 2,
             ),
-            Gap(10),
+            const Gap(10),
             Expanded(child: Clickable(
               onPressed: () {
 
@@ -106,11 +106,12 @@ class ContactPage extends StatelessWidget {
             horizontal:
                 SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000)
                     .get()),
-        Gap(10),
+        const Gap(10),
         Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
+              flex: 1,
               child: Clickable(
                 onPressed: () {
 
@@ -138,9 +139,8 @@ class ContactPage extends StatelessWidget {
                   ),
                 ),
               ),
-              flex: 1,
             ),
-            Gap(10),
+            const Gap(10),
             Expanded(
               flex: 2,
               child: Clickable(
@@ -177,7 +177,7 @@ class ContactPage extends StatelessWidget {
             horizontal:
             SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000)
                 .get()),
-        FooterWidget()
+        const FooterWidget()
       ],
     );
   }

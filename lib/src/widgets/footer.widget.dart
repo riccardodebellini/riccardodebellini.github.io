@@ -7,17 +7,17 @@ class FooterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Divider(
-        height: 60.0,
-      ).withPadding(
-          horizontal: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get()),
-        Text("Sito protetto da Copyright - (C) 2025 Riccardo Debellini").muted().small()
-            .withPadding(
-            left: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get(),
-            right: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get(), bottom: 30)],
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
+      children: [const Divider(
+        height: 60.0,
+      ).withPadding(
+          horizontal: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get()),
+        const Text("Sito protetto da Copyright - (C) 2025 Riccardo Debellini").muted().small()
+            .withPadding(
+            left: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get(),
+            right: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get(), bottom: 30)],
 
     );
   }
