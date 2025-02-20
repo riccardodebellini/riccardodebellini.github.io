@@ -1,3 +1,4 @@
+import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:portfolio/src/widgets/sizebased.widget.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
@@ -57,7 +58,7 @@ class ContactPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const Icon(
-                        RadixIcons.githubLogo,
+                        LucideIcons.github,
                         size: 32,
                       ),
                       const Gap(16),
@@ -86,7 +87,7 @@ class ContactPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     const Icon(
-                      RadixIcons.instagramLogo,
+                      LucideIcons.instagram,
                       size: 32,
                     ),
                     const Gap(16),
@@ -126,7 +127,7 @@ class ContactPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const Icon(
-                        RadixIcons.envelopeClosed,
+                        LucideIcons.mail,
                         size: 32,
                       ),
                       const Gap(16),
@@ -152,13 +153,18 @@ class ContactPage extends StatelessWidget {
               child: Card(
                 borderRadius: Theme.of(context).borderRadiusMd,
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const Icon(
-                      RadixIcons.code,
-                      size: 32,
+                   Row(
+                      children: [
+                        const Icon(
+                          LucideIcons.code_xml,
+                          size: 32,
+                        ),
+                   const VerticalDivider(width: 16, thickness: 2,).sized(height: 16),
+                        const Icon(LucideIcons.graduation_cap, size: 32,)                      ],
                     ),
                     const Gap(16),
                     const Text('BinaryBears.it')
@@ -166,7 +172,7 @@ class ContactPage extends StatelessWidget {
                         .large(),
                     const Gap(8),
                     const Text(
-                        'Il club di informatica della mia scuola, dove ho imparato a programmare.\n(thanks to @eneamontoli)')
+                        'Il club di informatica della mia scuola, dove ho imparato a programmare.\n(thanks to @EneaMontoli)')
                         .muted(),
                   ],
                 ),

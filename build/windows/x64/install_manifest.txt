@@ -7,6 +7,7 @@ Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/run
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NativeAssetsManifest.json
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/ac.si
@@ -275,6 +276,7 @@ Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/run
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/za.si
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/zm.si
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/zw.si
+Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/flutter_lucide/lib/fonts/lucide.ttf
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/shadcn_flutter/fonts/Geist-Black.otf
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/shadcn_flutter/fonts/Geist-Bold.otf
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/shadcn_flutter/fonts/Geist-Light.otf

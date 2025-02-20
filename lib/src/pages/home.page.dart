@@ -1,3 +1,4 @@
+import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/src/widgets/footer.widget.dart';
 import 'package:portfolio/src/widgets/sizebased.widget.dart';
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
                     const Gap(10),
                     PrimaryButton(
                       trailing: Icon(
-                        RadixIcons.arrowRight,
+                        LucideIcons.arrow_right,
                         size: DefaultTextStyle.of(context).style.fontSize,
                       ),
                       onPressed: () {
@@ -69,7 +70,7 @@ class HomePage extends StatelessWidget {
                 const Alert(
                   title: Text('Sito non completo'),
                   content: Text('Molte pagine non sono terminate e/o pronte per il mobile.\nAspettati errori e/o pagine vuote (404).'),
-                  leading: Icon(Icons.info_outline),
+                  leading: Icon(LucideIcons.badge_alert),
                 ),
               ]).sized(height: MediaQuery.of(context).size.height),
           const Row(

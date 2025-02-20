@@ -1,5 +1,6 @@
 
 import 'package:flutter/services.dart';
+import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/src/pages/404.page.dart';
 import 'package:portfolio/src/pages/contact.page.dart';
@@ -23,6 +24,9 @@ class Website extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShadcnApp.router(
+      scrollBehavior: const ScrollBehavior(
+
+      ),
       title: 'Riccardo Debellini | Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -93,7 +97,7 @@ class ShellNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(headers: [
       AppBar(
-          leading: [const Text("Riccardo Debellini").bold()],
+          leading: [const Text("{RiccardoDebellini}").inlineCode()],
           child: SizeBased(context, ifSmall: null, ifLarge: const LargeNavigation())
               .get(),
           trailing: SizeBased(
@@ -102,13 +106,13 @@ class ShellNav extends StatelessWidget {
             ifLarge: [
               NavigationMenu(
                 children: [
-                  NavigationItem(
+                  NavigationMenuItem(
                     onPressed: () {
                       const url =
                           'https://github.com/riccardodebellini/riccardodebellini.github.io';
                       launchUrl(Uri.parse(url));
                     },
-                    child: const Icon(RadixIcons.githubLogo),
+                    child: const Icon(LucideIcons.github),
                   )
                 ],
               )
