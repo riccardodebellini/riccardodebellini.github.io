@@ -1,3 +1,7 @@
-# Riccardo Debellini's portfolio
+# My Portfolio [🛠️WIP]
 
-My portfolio, now built in Flutter with Fluent UI 2 design specs.
+
+>[!Warning]
+>The project is still a work in progress
+
+My portfolio, created in Flutter, with Shadcn/UI (shadcn_flutter), now better than ever.
