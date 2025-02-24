@@ -1,24 +1,26 @@
 import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/src/widgets/footer.widget.dart';
-import 'package:portfolio/src/widgets/sizebased.widget.dart';
+import 'package:portfolio/src/widgets/homepage.widget.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final ScrollController _controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       child: ListView(
+        controller: _controller,
         children: [
           Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-
-
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                const Spacer(),
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
@@ -47,9 +49,9 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     OutlineButton(
-                      child: const Text("Contattami"),
+                      child: const Text("Su di me"),
                       onPressed: () {
-                        context.go('/contact');
+                        context.go('/aboutme');
                       },
                     ),
                     const Gap(10),
@@ -63,28 +65,28 @@ class HomePage extends StatelessWidget {
                       },
                       child: const Text("I miei Progetti"),
                     ),
-
                   ],
                 ),
                 const Gap(20),
                 const Alert(
                   title: Text('Sito non completo'),
-                  content: Text('Molte pagine non sono terminate e/o pronte per il mobile.\nAspettati errori e/o pagine vuote (404).'),
+                  content: Text(
+                      'Molte pagine non sono terminate e/o pronte per il mobile.\nAspettati errori e/o pagine vuote (404).'),
                   leading: Icon(LucideIcons.badge_alert),
                 ),
-              ]).sized(height: MediaQuery.of(context).size.height),
-          const Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Card(child: Text('</>')),
-              ),
-              Gap(10),
-              Expanded(child: Card(child: Text("</>")))
-            ],
-          ).sized(height: 400).withPadding(
-              horizontal: SizeBased(context, ifSmall: 20.0, ifLarge: 200.0, breakpoint: 1000).get()),
+                const Spacer(),
+                IconButton.primary(
+                  icon: const Icon(LucideIcons.chevrons_down),
+                  onPressed: () {
+                    _controller.animateTo(context.size!.height,
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeOut);
+                  },
+                )
+              ])
+              .sized(height: MediaQuery.of(context).size.height - 120)
+              .withPadding(horizontal: 20, bottom: 60),
+          const HomePageWidget(),
           const FooterWidget()
         ],
       ),

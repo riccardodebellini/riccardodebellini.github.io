@@ -1,5 +1,5 @@
 name: portfolio
-description: "My portfolio, now built in Flutter with Fluent UI 2 design specs"
+description: "My portfolio, created in Flutter, with Shadcn/UI (shadcn_flutter), now better than ever."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

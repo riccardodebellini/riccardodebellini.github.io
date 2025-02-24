@@ -1,3 +1,4 @@
+import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -30,7 +31,7 @@ class LargeNavigation extends StatelessWidget {
                   content: const Text(
                       'Una app per gestire la tua libreria casalinga!'),
                   leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.bookmarkFilled),
+                    icon: const Icon(LucideIcons.library),
                     onPressed: () {},
                   ),
                   onPressed: () {
@@ -38,23 +39,23 @@ class LargeNavigation extends StatelessWidget {
                   },
                 ),
                 NavigationMenuContent(
-                  title: const Text('My.Transport'),
+                  title: const Text('My.Diario'),
                   content: const Text(
-                      'Scopri in realtime i tempi di attesa di ATM Milano'),
+                      '[Pianificata] Gestisci i tuoi compiti, ovunque tu sia'),
                   leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.timer),
+                    icon: const Icon(LucideIcons.book_open_check),
                     onPressed: () {},
                   ),
                   onPressed: () {
-                    context.go('/projects/mytransport');
+                    context.go('/projects/myschool');
                   },
                 ),
                 NavigationMenuContent(
-                  title: const Text('My.School'),
+                  title: const Text('FantaProf'),
                   content: const Text(
-                      '[Futura] Gestisci i tuoi compiti, ovunque tu sia'),
+                      '[In sviluppo] Scegli i tuoi professori e sfida i tuoi amici'),
                   leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.check),
+                    icon: const Icon(LucideIcons.school),
                     onPressed: () {},
                   ),
                   onPressed: () {
@@ -75,7 +76,7 @@ class LargeNavigation extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         const Icon(
-                          RadixIcons.code,
+                          LucideIcons.folder_code,
                           size: 32,
                         ),
                         const Gap(16),
@@ -96,35 +97,6 @@ class LargeNavigation extends StatelessWidget {
             child: const Text('Progetti'),
           ),
           NavigationMenuItem(
-            content: NavigationMenuContentList(
-              reverse: true,
-              children: [
-                NavigationMenuContent(
-                  title: const Text('e-mail'),
-                  leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.envelopeClosed),
-                    onPressed: () {},
-                  ),
-                  onPressed: () {},
-                ),
-                NavigationMenuContent(
-                  title: const Text('Instagram'),
-                  leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.instagramLogo),
-                    onPressed: () {},
-                  ),
-                  onPressed: () {},
-                ),
-                NavigationMenuContent (
-                  title: const Text('GitHub'),
-                  leading: IconButton.outline(
-                    icon: const Icon(RadixIcons.githubLogo),
-                    onPressed: () {},
-                  ),
-                  onPressed: () {},
-                ),
-              ],
-            ),
             onPressed: () {
               context.go('/contact');
             },
@@ -149,13 +121,14 @@ class _SmallNavigationState extends State<SmallNavigation> {
       data: 'Home',
     ),
     TreeItem(
+      expanded: true,
       data: 'Progetti',
       children: [
         TreeItem(
           data: 'My.Bookshelf',
         ),
-        TreeItem(data: 'My.School'),
-        TreeItem(data: 'My.Transport')
+        TreeItem(data: 'My.Diario'),
+        TreeItem(data: 'FantaProf')
       ],
     ),
     TreeItem(
@@ -182,8 +155,9 @@ class _SmallNavigationState extends State<SmallNavigation> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Expanded(
-                          child:
-                              const Text('{RiccardoDebellini}').large().medium(),
+                          child: const Text('{RiccardoDebellini}')
+                              .large()
+                              .medium(),
                         ),
                         IconButton.ghost(
                           icon: const Icon(Icons.close),
@@ -229,11 +203,15 @@ class _SmallNavigationState extends State<SmallNavigation> {
                       },
                     ),
                     const Spacer(),
-                    OutlineButton(trailing: const Icon(RadixIcons.githubLogo), onPressed: () {
-                      const url =
-                          'https://github.com/riccardodebellini/riccardodebellini.github.io';
-                      launchUrl(Uri.parse(url));
-                    },child: const Text("Repo"), )
+                    OutlineButton(
+                      trailing: const Icon(RadixIcons.githubLogo),
+                      onPressed: () {
+                        const url =
+                            'https://github.com/riccardodebellini/riccardodebellini.github.io';
+                        launchUrl(Uri.parse(url));
+                      },
+                      child: const Text("Repo"),
+                    )
                   ],
                 ),
               );

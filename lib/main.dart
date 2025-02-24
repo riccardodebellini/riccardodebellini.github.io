@@ -1,4 +1,3 @@
-
 import 'package:flutter/services.dart';
 import 'package:flutter_lucide/flutter_lucide.dart';
 import 'package:go_router/go_router.dart';
@@ -24,9 +23,7 @@ class Website extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShadcnApp.router(
-      scrollBehavior: const ScrollBehavior(
-
-      ),
+      scrollBehavior: const ScrollBehavior(),
       title: 'Riccardo Debellini | Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -62,7 +59,7 @@ final GoRouter _router = GoRouter(
         GoRoute(
           path: '/',
           builder: (context, state) {
-            return const HomePage();
+            return HomePage();
           },
         ),
         // Displayed ShellRoute's Navigator.
@@ -91,33 +88,40 @@ void setPageTitle(String title, BuildContext context) {
 
 class ShellNav extends StatelessWidget {
   final Widget child;
+
   const ShellNav({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(headers: [
-      AppBar(
-          leading: [const Text("{RiccardoDebellini}").inlineCode()],
-          child: SizeBased(context, ifSmall: null, ifLarge: const LargeNavigation())
-              .get(),
-          trailing: SizeBased(
-            context,
-            ifSmall: [const SmallNavigation()],
-            ifLarge: [
-              NavigationMenu(
-                children: [
-                  NavigationMenuItem(
-                    onPressed: () {
-                      const url =
-                          'https://github.com/riccardodebellini/riccardodebellini.github.io';
-                      launchUrl(Uri.parse(url));
-                    },
-                    child: const Icon(LucideIcons.github),
+      Stack(
+        alignment: Alignment.center,
+        children: [
+          AppBar(
+              leading: [const Text("{RiccardoDebellini}").inlineCode()],
+              trailing: SizeBased(
+                context,
+                ifSmall: [const SmallNavigation()],
+                ifLarge: [
+                  NavigationMenu(
+                    children: [
+                      NavigationMenuItem(
+                        onPressed: () {
+                          const url =
+                              'https://github.com/riccardodebellini/riccardodebellini.github.io';
+                          launchUrl(Uri.parse(url));
+                        },
+                        child: const Icon(LucideIcons.github),
+                      )
+                    ],
                   )
                 ],
-              )
-            ],
-          ).get())
+              ).get()),
+          SizeBased(context,
+                  ifSmall: Container(), ifLarge: const LargeNavigation())
+              .get(),
+        ],
+      ),
     ], child: child);
   }
 }
