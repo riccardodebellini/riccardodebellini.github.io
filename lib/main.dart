@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:portfolio/src/pages/404.page.dart';
 import 'package:portfolio/src/pages/contact.page.dart';
 import 'package:portfolio/src/pages/home.page.dart';
+import 'package:portfolio/src/pages/projects.page.dart';
 import 'package:portfolio/src/widgets/navigation.widget.dart';
 import 'package:portfolio/src/widgets/sizebased.widget.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
@@ -67,6 +68,12 @@ final GoRouter _router = GoRouter(
           path: '/contact',
           builder: (BuildContext context, GoRouterState state) {
             return const ContactPage();
+          },
+        ),
+        GoRoute(
+          path: '/projects',
+          builder: (BuildContext context, GoRouterState state) {
+            return const ProjectsPage();
           },
         ),
         GoRoute(

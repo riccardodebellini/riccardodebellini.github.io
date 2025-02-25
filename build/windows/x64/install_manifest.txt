@@ -2,13 +2,11 @@ Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/run
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/flutter_windows.dll
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dll
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
-Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NativeAssetsManifest.json
-Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/ac.si
 Z:/Coding/Repositories/Flutter/riccardodebellini.github.io/build/windows/x64/runner/Debug/data/flutter_assets/packages/country_flags/res/si/ad.si
