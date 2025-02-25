@@ -6,7 +6,12 @@ class SizeBased {
   final int breakpoint;
   final BuildContext context;
 
-  const SizeBased(this.context, {required this.ifSmall, required this.ifLarge, this.breakpoint = 800, });
+  const SizeBased(
+    this.context, {
+    required this.ifSmall,
+    required this.ifLarge,
+    this.breakpoint = 800,
+  });
 
   get() {
     final size = MediaQuery.of(context).size.width;

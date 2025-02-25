@@ -39,18 +39,6 @@ class LargeNavigation extends StatelessWidget {
                   },
                 ),
                 NavigationMenuContent(
-                  title: const Text('My.Diario'),
-                  content: const Text(
-                      '[Pianificata] Gestisci i tuoi compiti, ovunque tu sia'),
-                  leading: IconButton.outline(
-                    icon: const Icon(LucideIcons.book_open_check),
-                    onPressed: () {},
-                  ),
-                  onPressed: () {
-                    context.go('/projects/myschool');
-                  },
-                ),
-                NavigationMenuContent(
                   title: const Text('FantaProf'),
                   content: const Text(
                       '[In sviluppo] Scegli i tuoi professori e sfida i tuoi amici'),
@@ -62,6 +50,19 @@ class LargeNavigation extends StatelessWidget {
                     context.go('/projects/myschool');
                   },
                 ),
+                NavigationMenuContent(
+                  title: const Text('My.Diario'),
+                  content: const Text(
+                      '[Pianificata] Gestisci i tuoi compiti, ovunque tu sia'),
+                  leading: IconButton.outline(
+                    icon: const Icon(LucideIcons.book_open_check),
+                    onPressed: () {},
+                  ),
+                  onPressed: () {
+                    context.go('/projects/myschool');
+                  },
+                ),
+
                 Clickable(
                   onPressed: () {
                     context.go('/projects');
@@ -98,6 +99,12 @@ class LargeNavigation extends StatelessWidget {
           ),
           NavigationMenuItem(
             onPressed: () {
+              context.go('/news');
+            },
+            child: const Text('News'),
+          ),
+          NavigationMenuItem(
+            onPressed: () {
               context.go('/contact');
             },
             child: const Text('Contatti'),
@@ -121,14 +128,18 @@ class _SmallNavigationState extends State<SmallNavigation> {
       data: 'Home',
     ),
     TreeItem(
+      data: 'Chi sono',
+    ),
+    TreeItem(
+      data: 'News',
+    ),
+    TreeItem(
       expanded: true,
       data: 'Progetti',
       children: [
-        TreeItem(
-          data: 'My.Bookshelf',
-        ),
-        TreeItem(data: 'My.Diario'),
-        TreeItem(data: 'FantaProf')
+        TreeItem(data: 'My.Bookshelf'),
+
+        TreeItem(data: 'FantaProf')   ,     TreeItem(data: 'My.Diario'),
       ],
     ),
     TreeItem(
