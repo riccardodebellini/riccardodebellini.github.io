@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // 1. Get the path (e.g., "/nonexists") and query params
+        const path = window.location.pathname;
+        const query = window.location.search;
+        
+        // 2. Redirect to the main domain keeping the path
+        window.location.replace("https://riccardo.is-a.dev" + path + query);
+    </script>
+</head>
+<body>
+    <p>Page not found here. Redirecting to main website...</p>
+</body>
+</html>
